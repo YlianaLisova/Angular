@@ -1,0 +1,10 @@
+.users{
+  display: flex;
+  justify-content: center;
+  flex-direction:column ;
+  border-radius: 10px;
+  background: plum;
+  width: 200px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
