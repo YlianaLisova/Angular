@@ -19,6 +19,7 @@ import {RouterModule} from "@angular/router";
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
+      {path:'', redirectTo:'users-page', pathMatch:'full'},
       {path:'users-page', component: UsersComponent,
       children:[
         {path:'user-details/:id', component: UserDetailsComponent}
