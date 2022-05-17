@@ -1,0 +1,16 @@
+.users{
+  border: 1px solid darkblue;
+  max-width: 200px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #aa90ce;
+  margin-top: 5px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+}
