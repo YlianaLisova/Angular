@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: orchid;
+  border: 1px solid black;
+  height: 50px;
+}
+
+a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+
+.active a{
+  color: #e6ec46;
+}
