@@ -1,1 +1,7 @@
-<p>comment-details works!</p>
+<div class="container" *ngIf="comment">
+  <div>Id: {{comment.id}}</div>
+  <div>PostId: {{comment.postId}}</div>
+  <div>Name: {{comment.name}}</div>
+  <div>Email: {{comment.email}}</div>
+  <div>Body: {{comment.body}}</div>
+</div>
