@@ -1,0 +1,13 @@
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container a{
+  text-decoration: none;
+  color: rgba(13,11,13,0.85);
+  font-size: 20px;
+}
+.active a{
+  color: orangered;
+}
