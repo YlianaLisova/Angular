@@ -32,8 +32,10 @@ export class RegisterComponent implements OnInit {
     const rawValue = this.form.getRawValue();
     delete rawValue.confirmPassword;
     this.authService.register(rawValue).subscribe(
-      () => this.router.navigate(['login']),
-      e => this.userNameError = e.error.username[0]
+      {
+        next:() => this.router.navigate(['login']),
+        error: e => this.userNameError = e.error.username[0]
+      }
       )
 
   }
