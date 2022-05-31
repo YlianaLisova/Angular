@@ -22,12 +22,12 @@ export class MainInterceptor implements HttpInterceptor {
       request = this.addToken(request, this.authService.getToken())
     }
     return next.handle(request).pipe(
-      catchError((res:HttpErrorResponse) => {
-        if (res && res.error && res.status === 401){
+      catchError((res: HttpErrorResponse) => {
+        if (res && res.error && res.status === 401) {
           this.authService.deleteToken();
           this.router.navigate(['login']).then()
         }
-        return throwError(()=> new Error('token invalid or expired'))
+        return throwError(() => new Error('token invalid or expired'))
       })
     );
   }
@@ -37,4 +37,5 @@ export class MainInterceptor implements HttpInterceptor {
       setHeaders: {Authorization: `Bearer ${token}`}
     })
   }
+
 }
