@@ -27,12 +27,14 @@ export class CarsComponent implements OnInit {
     if (!this.carForUpdate){
       this.carService.create(this.form.value).subscribe(value => {
         this.cars.push(value)
+        this.form.reset()
       })
     } else {
       this.carService.updateById(this.carForUpdate.id, this.form.value).subscribe(value => {
         const updateCar = this.cars.find(f=> f.id === this.carForUpdate?.id);
         Object.assign(updateCar, value)
         this.carForUpdate = null
+        this.form.reset()
       })
     }
   }
@@ -54,6 +56,7 @@ export class CarsComponent implements OnInit {
 
   update(car: ICar):void {
     this.carForUpdate = car
+    this.form.setValue({model:car.model, year:car.year,price:car.price})
 
 
   }
